@@ -3,31 +3,28 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-
-
-# The game starts here.
+define jay = Character("Jay")
+define razz = Character("Razz")
+define josh = Character("Josh")
 
 label start:
+    scene bg street
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    "It's a dark and cloudy night over Hunter's Green"
+    "A night like this could remind you of another night, where three friends went for a drive..."
+    "...hoping to see the only abandoned house in Hunter's Green."
+    play sound car_pulling_up
+    queue sound turning_off_car
+    "A car pulls up to the driveway."
+    "Razz, Jay, and Josh exit the car."
+    stop sound
 
-    scene bg room
+    show razz smirk
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    razz "So, legend has it the previous inhabitants 'passed away of mysterious causes.'"
 
-    show eileen happy
+    show jay unimpressed
 
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
+    jay "Yeah, legend. {i}Myth.{/i}"
+    
     return
