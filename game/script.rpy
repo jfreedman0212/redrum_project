@@ -19,26 +19,26 @@ label start:
     "Razz, Jay, and Josh exit the car."
     stop sound
 
-    show razz smirk
+    show razz smug
     razz "So, legend has it the previous inhabitants 'passed away of mysterious causes.'"
     show jay unimpressed
     hide razz
     play sound car_door_shut
     jay "Yeah, legend. {i}Myth.{/i}"
 
-    show josh normal
+    show josh
     play sound car_door_shut
     josh "Anyway, now that we're actually here..."
     # TODO: play car locking sfx?
     # TODO: display the house
     josh "Time to find out if this place is haunted."
-    show josh normal at left
+    show josh at left
     with move
+    show razz at left
+    with moveinleft
     show jay smug at right 
     with move
     jay "Or not..."
-    show razz unimpressed 
-    with move
 
 
     return
