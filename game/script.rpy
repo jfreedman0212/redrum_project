@@ -38,7 +38,12 @@ label start:
     with moveinleft
     show jay smug at right 
     with move
-    jay "Or not..."
-
+    jay "Or not."
+    hide razz
+    hide jay
+    show josh smile at center
+    josh "Let's look for a way in."
+    show jay
+    jay "Nobody brought a key?"
 
     return
