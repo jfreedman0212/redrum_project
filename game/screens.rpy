@@ -246,14 +246,14 @@ screen quick_menu():
             style_prefix "quick"
             style "quick_menu"
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("BACK") action Rollback()
+            textbutton _("HISTORY") action ShowMenu('history')
+            textbutton _("SKIP") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("AUTO") action Preference("auto-forward", "toggle")
+            textbutton _("SAVE") action ShowMenu('save')
+            textbutton _("Q.SAVE") action QuickSave()
+            textbutton _("Q.LOAD") action QuickLoad()
+            textbutton _("OPTIONS") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -299,17 +299,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("START") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("HISTORY") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("SAVE") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("LOAD") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("OPTIONS") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,20 +317,20 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("MENU") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("ABOUT") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("HELP") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("EXIT") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -1172,8 +1172,8 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("YES") action yes_action
+                textbutton _("NO") action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action

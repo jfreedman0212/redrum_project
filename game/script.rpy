@@ -3,9 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define jay = Character("Jay")
-define razz = Character("Razz")
-define josh = Character("Josh")
+define jay = Character("JAY")
+define razz = Character("RAZZ")
+define josh = Character("JOSH")
 
 label start:
     scene bg street
