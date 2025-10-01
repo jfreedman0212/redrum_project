@@ -13,6 +13,11 @@ label start:
     "It's a dark and cloudy night over Hunter's Green"
     "A night like this could remind you of another night, where three friends went for a drive..."
     "...hoping to see the only abandoned house in Hunter's Green."
+    menu:
+        "Do you want to hear the story?"
+        
+        "Yes":
+            pass    
     play sound car_pulling_up
     queue sound turning_off_car
     "A car pulls up to the driveway."
